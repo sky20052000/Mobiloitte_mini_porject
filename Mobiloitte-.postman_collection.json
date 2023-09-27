@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "0e91d610-7c80-4187-8c2d-a25a33bdc498",
+		"name": "Mobiloitte-",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17695013"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"shasikant3\",\r\n     \"email\":\"shashikant3.sy126@gmail.com\",\r\n       \"password\":\"Shahsi3@12345\",\r\n       \"role\":1\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/user/register"
+			},
+			"response": []
+		},
+		{
+			"name": "update_password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1Nzg4MTU2LCJleHAiOjE2OTU3OTE3NTZ9.x6PYTqU76EcwpofdUi4ipcUlc6botONXul3UJ-_6AUs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\":\"65131d8b1e470709cc560e8a\",\r\n       \"password\":\"Shahsikant@12345\"\r\n       \r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/user/update_password"
+			},
+			"response": []
+		},
+		{
+			"name": "forget_password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1NzkyNjUzLCJleHAiOjE2OTU3OTYyNTN9.s5XFYZVy-TdCcebKAlUtiroWShhGUXkmCrkZBfZpWfQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"email\":\"shashikant.sy126@gmail.com\"\r\n       \r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/user/forget_password"
+			},
+			"response": []
+		},
+		{
+			"name": "reset_password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1Nzk0MDMzLCJleHAiOjE2OTU3OTc2MzN9.FW8A4RaCoQvILOc-YHimNmlx9L5uLn6jaQUm1QVyjEI"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \"password\":\"Shahsikant@123\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/api/user/reset_password?token=eUlQwtIzBMm1PFdPfjneJq2qBSx6UZ2I",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"api",
+						"user",
+						"reset_password"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eUlQwtIzBMm1PFdPfjneJq2qBSx6UZ2I"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"email\":\"shashikant.sy126@gmail.com\",\r\n     \"password\":\"Shahsikant@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "getUserProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1NzU2NDkxLCJleHAiOjE2OTU3NjAwOTF9.dwniXxsgttQMM5IeceArAaaYVw_dFiYqFMXWY4NVEug"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:7000/api/user/getUserProfile/65131d8b1e470709cc560e8a"
+			},
+			"response": []
+		},
+		{
+			"name": "create_Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1NzU3OTY5LCJleHAiOjE2OTU3NjE1Njl9.dVHOrg44wn3HDqSzPpJOO0NEdrGCtBvV50Q8heK_81Q"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"65131d8b1e470709cc560e8a\",\r\n    \"description\":\"blallas\",\r\n    \"category\":\"Jokes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/post/create_post"
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1NzU3OTY5LCJleHAiOjE2OTU3NjE1Njl9.dVHOrg44wn3HDqSzPpJOO0NEdrGCtBvV50Q8heK_81Q"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"65131d8b1e470709cc560e8a\",\r\n    \"description\":\"blallas\",\r\n    \"category\":\"Jokes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/post/all_post"
+			},
+			"response": []
+		},
+		{
+			"name": "get_post_detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1NzU3OTY5LCJleHAiOjE2OTU3NjE1Njl9.dVHOrg44wn3HDqSzPpJOO0NEdrGCtBvV50Q8heK_81Q"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"65131d8b1e470709cc560e8a\",\r\n    \"description\":\"blallas\",\r\n    \"category\":\"Jokes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/post/get_post_detail/651336a68c82fb6185f51385"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMxZDhiMWU0NzA3MDljYzU2MGU4YSIsInJvbGUiOiIxIiwiaWF0IjoxNjk1NzU3OTY5LCJleHAiOjE2OTU3NjE1Njl9.dVHOrg44wn3HDqSzPpJOO0NEdrGCtBvV50Q8heK_81Q"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"65131d8b1e470709cc560e8a\",\r\n    \"description\":\"blallas\",\r\n    \"category\":\"Jokes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/post/delete_post/651336a68c82fb6185f51385"
+			},
+			"response": []
+		},
+		{
+			"name": "delete_user_by_admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMzYzA2YWM4ZTRhZWM1MzRkZjM4ZCIsInJvbGUiOiIyIiwiaWF0IjoxNjk1NzU5ODAzLCJleHAiOjE2OTU3NjM0MDN9.PSNFmRxqJxpiI8R_azAZyxEe2NZuJTps1VnK_DuQrEY"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"65131d8b1e470709cc560e8a\",\r\n    \"description\":\"blallas\",\r\n    \"category\":\"Jokes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/user/admin/user/65133d7cb71d1ed8bba3aa05"
+			},
+			"response": []
+		},
+		{
+			"name": "userList_admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMzYzA2YWM4ZTRhZWM1MzRkZjM4ZCIsInJvbGUiOiIyIiwiaWF0IjoxNjk1Nzg2NDExLCJleHAiOjE2OTU3OTAwMTF9.xbJ5kwrt3aqfYbMxxaIOEJKZqxNKVqPhc-VVlMIl_9M"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"\", \r\n    \"email\":\"\", \r\n    \"fromDate\":\"\", \r\n    \"toDate\":\"\", \r\n    \"sort\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/user/admin/all_user"
+			},
+			"response": []
+		},
+		{
+			"name": "block_user_byAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MTMzYzA2YWM4ZTRhZWM1MzRkZjM4ZCIsInJvbGUiOiIyIiwiaWF0IjoxNjk1NzU5ODAzLCJleHAiOjE2OTU3NjM0MDN9.PSNFmRxqJxpiI8R_azAZyxEe2NZuJTps1VnK_DuQrEY"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"65133d72b71d1ed8bba3aa02\",\r\n    \"user_name\":\"shashikant2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/user/admin/block/user"
+			},
+			"response": []
+		}
+	]
+}
