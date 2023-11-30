@@ -1,4 +1,5 @@
 const Post = require("../models/postModels");
+const mongoose = require("mongoose");
 
 const create_post = async (req, res) => {
   try {
@@ -25,7 +26,22 @@ const create_post = async (req, res) => {
 
 const getAllPost = async (req, res) => {
   try {
-    const getData = await Post.find({});
+    // console.log(req.find_user.id,"BBBBBB")
+    const getData = await Post.aggregate([
+      // {
+      //   $match: {
+      //     userId:req.find_user.id
+      //   },
+      // },
+      {
+        $lookup: {
+          from: "users",          // Assuming the "users" collection name
+          localField:"userId",   // Field from the "Post" collection
+          foreignField: "_id",    // Field from the "User" collection
+          as: "userDetails"       // Output array field
+        }
+      },
+    ]);
     if (!getData) {
       return res.status(200).json({ success: true, message: "No data found!" });
     }
@@ -34,6 +50,7 @@ const getAllPost = async (req, res) => {
       data: getData,
     });
   } catch (e) {
+       console.log(e,"n")
     return res.status(500).json({
       success: false,
       message: "Something went wrong!",
